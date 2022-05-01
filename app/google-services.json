@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "125455181207",
+    "project_id": "hellorajbari-d4b35",
+    "storage_bucket": "hellorajbari-d4b35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125455181207:android:ad391cbb9e18f8f422d0d2",
+        "android_client_info": {
+          "package_name": "com.friendsit.hellorajbari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125455181207-httv04bn9lsagi5l31hoppttscvlumtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0BDD5P2Tm8RxJ8pVbgvosaIy9Sy7RAJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125455181207-httv04bn9lsagi5l31hoppttscvlumtp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
