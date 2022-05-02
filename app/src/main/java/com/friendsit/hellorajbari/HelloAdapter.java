@@ -1,7 +1,11 @@
 package com.friendsit.hellorajbari;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -17,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
+import java.util.Locale;
 
 public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHolder> {
     private Context context;
@@ -59,9 +65,12 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
 
     private void emailOnClick(String email) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:" + email));
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_EMAIL,new String[]{email});
         if (intent.resolveActivity(context.getPackageManager()) != null) {
             context.startActivity(intent);
+        }else {
+            Toast.makeText(context, "This Device doesn't have any Email sender app Installed", Toast.LENGTH_SHORT).show();
         }
     }
 
